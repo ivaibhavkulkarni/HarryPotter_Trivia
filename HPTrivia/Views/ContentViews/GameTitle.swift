@@ -18,7 +18,7 @@ struct GameTitle: View {
                         .imageScale(.large)
                         .font(.largeTitle)
                     
-                    Text("HP")
+                    Text("Harry Potter")
                         .font(.custom("PartyLetPlain", size: 70))
                         .padding(.bottom,-50)
                     Text("Trivia")
