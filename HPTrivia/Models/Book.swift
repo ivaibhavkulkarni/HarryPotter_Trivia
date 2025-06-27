@@ -10,10 +10,8 @@ struct Book: Identifiable {
     var image: String
     var questions: [Question]
     var status: BookStatus
-    
-    
-    
-    enum BookStatus {
-        case active, inactive, locked
-    }
+}
+
+enum BookStatus {
+    case active, inactive, locked
 }
