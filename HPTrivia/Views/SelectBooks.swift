@@ -12,6 +12,8 @@ struct SelectBooks: View {
     @Environment(Game.self) private var game
     @State private var showTempAlert = false
     
+    private var store = Store()
+    
     var activeBooks: Bool {
         for book in game.bookQuestions.books {
             if book.status == .active {
@@ -87,6 +89,10 @@ struct SelectBooks: View {
         .alert("You Purchased This Book!!", isPresented: $showTempAlert) {
             
         }
+        .task {
+            await store.loadProucts()
+        }
+        
     }
 }
 
