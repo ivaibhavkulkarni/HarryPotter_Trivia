@@ -65,7 +65,33 @@ class Store {
     
     
     // Check for purchase products
-    
+    private func checkPurchased() async {
+        for product in products{
+            guard let status = await product.currentEntitlement else {continue}
+            
+            switch status  {
+            case .unverified(let signedType, let verificationError):
+                print("Error on \(signedType): \(verificationError)")
+            
+            case .verified(let signedType):
+                if signedType.revocationDate == nil {
+                    purchased.insert(signedType.productID)
+                } else{
+                    purchased.remove(signedType.productID)
+                }
+            }
+        }
+    }
     
     // Connect with App store to watch for purchase and transaction updates
+    private func watchForUpdates() -> Task <Void, Never> {
+        Task(priority: .background) {
+            for await _ in Transaction.updates {
+                await checkPurchased()
+            }
+        }
+        
+    }
+    
+    
 }
