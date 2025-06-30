@@ -5,7 +5,7 @@
 //  Created by Vaibhav kulkarni on 26/06/25.
 //
 
-struct Question: Decodable {
+struct Question: Codable {
     let id: Int
     let question: String
     let answer: String
