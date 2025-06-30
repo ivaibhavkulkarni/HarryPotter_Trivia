@@ -39,9 +39,12 @@ struct SelectBooks: View {
                 ScrollView{
                     LazyVGrid(columns: [GridItem(),GridItem()]) {
                         ForEach(game.bookQuestions.books) { book in
-                            if book.status == .active {
+                            if book.status == .active || (book.status == .locked && store.purchased.contains(book.image)){
                                 // Active Book
                                 ActiveBook(book: book)
+                                    .task{
+                                        game.bookQuestions.changeStatus(of: book.id, to: .active)
+                                    }
                                     .onTapGesture{
                                     game.bookQuestions.changeStatus(of: book.id, to: .inactive)
                                 }
@@ -57,8 +60,11 @@ struct SelectBooks: View {
                                 // Locked Book
                                 LockedBook(book: book)
                                 .onTapGesture{
-                                    showTempAlert.toggle()
-                                    game.bookQuestions.changeStatus(of: book.id, to: .active)
+                                    let product = store.products[book.id-4]
+                                    
+                                    Task{
+                                        await store.purchase(product)
+                                    }
                                 }
                             }
                             
@@ -86,9 +92,6 @@ struct SelectBooks: View {
             .foregroundStyle(.black)
         }
         .interactiveDismissDisabled(!activeBooks)
-        .alert("You Purchased This Book!!", isPresented: $showTempAlert) {
-            
-        }
         .task {
             await store.loadProucts()
         }
