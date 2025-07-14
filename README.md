@@ -1,5 +1,5 @@
 # Harry Potter Trivia
-## HPTrivia is a SwiftUI-based iOS application designed for fans of the Harry Potter series. The app offers an engaging trivia game where players can test their knowledge of the Harry Potter books through a variety of questions, interactive gameplay, and in-app purchases to unlock additional content. The app features a visually appealing interface with animations, audio effects, and a user-friendly design.
+HPTrivia is a SwiftUI-based iOS application designed for fans of the Harry Potter series. The app offers an engaging trivia game where players can test their knowledge of the Harry Potter books through a variety of questions, interactive gameplay, and in-app purchases to unlock additional content. The app features a visually appealing interface with animations, audio effects, and a user-friendly design.
 ## Features
 1. Game Intro Screen
 
