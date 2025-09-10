@@ -120,10 +120,11 @@ git clone <repository-url>
 - This project is licensed under the MIT License. See the LICENSE file for details.
 
 ## ScreenShots
-![IMG_9557](https://github.com/user-attachments/assets/8f267f41-387c-42a4-94ca-cd05f113099e)
-![IMG_9556](https://github.com/user-attachments/assets/f772cf1c-b808-4f33-89d3-0b6dd35aab42)
-![IMG_9555](https://github.com/user-attachments/assets/0f030f76-0d67-49df-b80c-8227e8e0ebbe)
-![IMG_9554](https://github.com/user-attachments/assets/b9a81ac4-ff6a-4d08-906d-c44599f53088)
-![IMG_9553](https://github.com/user-attachments/assets/9251e8c2-7a85-47b8-a0d8-096e68c26d0e)
-![IMG_9552](https://github.com/user-attachments/assets/3aee1922-5a3e-421a-b5df-e4551fa269a7)
+<img src="https://github.com/user-attachments/assets/8f267f41-387c-42a4-94ca-cd05f113099e" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/f772cf1c-b808-4f33-89d3-0b6dd35aab42" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/0f030f76-0d67-49df-b80c-8227e8e0ebbe" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/b9a81ac4-ff6a-4d08-906d-c44599f53088" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/9251e8c2-7a85-47b8-a0d8-096e68c26d0e" width="300" height="600" />
+<img src="https://github.com/user-attachments/assets/3aee1922-5a3e-421a-b5df-e4551fa269a7" width="300" height="600" />
+
 
